@@ -1,0 +1,11 @@
+{
+    "routes": [
+        {
+            "path": "/admin/system/terminal",
+            "controller": "ride\\web\\base\\controller\\TerminalController",
+            "action": "indexAction",
+            "methods": ["head", "get", "post"],
+            "id": "system.terminal"
+        }
+    ]
+}
