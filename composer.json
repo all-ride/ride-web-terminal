@@ -1,0 +1,24 @@
+{
+    "name": "ride/web-terminal",
+    "description": "Web UI for a terminal of a Ride application",
+    "license": "MIT",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Joris Vandeweerd",
+            "email": "joris@statik.be"
+        }
+    ],
+    "require": {
+        "ride/lib-event": ">=0.3.0",
+        "ride/lib-log": ">=0.3.0",
+        "ride/lib-system": ">=0.3.0",
+        "ride/web-base": ">=0.2.4"
+    },
+    "autoload": {
+        "psr-0": {
+            "ride\\web\\base\\controller\\TerminalController": ["src/"],
+            "ride\\web\\base\\TerminalApplicationApplicationListener": ["src/"]
+        }
+    }
+}
