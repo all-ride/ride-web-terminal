@@ -18,7 +18,7 @@
     "autoload": {
         "psr-0": {
             "ride\\web\\base\\controller\\TerminalController": ["src/"],
-            "ride\\web\\base\\TerminalApplicationApplicationListener": ["src/"]
+            "ride\\web\\base\\TerminalApplicationListener": ["src/"]
         }
     }
 }
