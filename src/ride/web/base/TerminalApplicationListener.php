@@ -10,7 +10,7 @@ class TerminalApplicationListener {
 
     /**
      * Adds a menu item for the terminal
-     * @param ride\library\event\Event $event
+     * @param \ride\library\event\Event $event
      * @return null
      */
     public function handleTaskbar(Event $event) {
