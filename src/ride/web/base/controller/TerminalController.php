@@ -102,13 +102,19 @@ class TerminalController extends AbstractController {
                     }
                 } else {
                     // any other command
-                    $output = $system->execute($command);
+                    if ($system->isUnix() && strpos($command, '2>') === false) {
+                        $commandSuffix = ' 2>&1';
+                    } else {
+                        $commandSuffix = '';
+                    }
+
+                    $output = $system->execute($command . $commandSuffix);
                     $output = htmlentities(implode("\n", $output));
                 }
             } catch (Exception $exception) {
                 $log->logException($exception);
 
-                $output = 'Error: ' . $exception->getMessage();
+                $output = 'Error: ' . str_replace(' 2>&1', '', $exception->getMessage());
                 $isError = true;
             }
 
